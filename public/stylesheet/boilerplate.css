@@ -1,0 +1,7 @@
+body {
+    background-image: linear-gradient(rgb(255, 200, 32, .5), rgba(255, 255, 255, .8)), url("/images/CleanBG.png");
+    font-family: 'Poppins', sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
