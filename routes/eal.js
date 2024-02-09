@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require('../Model/user');
-const user = require("../Model/user");
+
 
 router.get('/examinationeal', async (req, res) => {
     const user = req.session.user; // Adjust this line based on where your user object is stored

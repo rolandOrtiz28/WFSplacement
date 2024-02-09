@@ -1,0 +1,51 @@
+<% layout('/layouts/boilerplate') -%>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Program</th>
+                <th scope="col">Reg. Date</th>
+                <th scope="col">Score</th>
+                <th scope="col">Percentage</th>
+                <th scope="col">Qualification</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(function(user, index) { %>
+                <tr style="color: #800000;">
+                    <th scope="row">
+                        <%= index + 1 %>
+                    </th>
+                    <td>
+                        <%= user.name %>
+                    </td>
+                    <td>
+                        <%= user.age %>
+                    </td>
+                    <td>
+                        <%= user.gender %>
+                    </td>
+                    <td>
+                        <%= user.program %>
+                    </td>
+                    <td>
+                        <%= user.createdAt.toLocaleString() %>
+                    </td>
+                    <td>
+                        <%= user.score %>
+                    </td>
+                    <td>
+                        <%= user.percentage %> %
+                    </td>
+                    <td>
+                        <%= user.qualification %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>

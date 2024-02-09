@@ -23,6 +23,7 @@ db.once("open", () => {
 const userRoute = require('./routes/user')
 const examRoute = require('./routes/exam')
 const ealexamRoute = require('./routes/eal')
+const adminRoute = require('./routes/admin')
 
 
 app.engine('ejs', ejsMate);
@@ -76,6 +77,7 @@ app.get('/', (req, res) => {
 app.use('/', userRoute)
 app.use('/', examRoute)
 app.use('/', ealexamRoute)
+app.use('/placement', adminRoute)
 
 
 const port = process.env.PORT || 3000;

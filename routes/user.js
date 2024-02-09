@@ -9,7 +9,7 @@ router.get('/register', async (req, res) => {
 
 
 router.post('/register', async (req, res) => {
-    await User.deleteMany({});
+
     const { name, age, gender, program } = req.body;
     const user = new User({ name, age, gender, program });
     console.log(user);
