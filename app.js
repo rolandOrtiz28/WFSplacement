@@ -22,6 +22,8 @@ db.once("open", () => {
 
 const userRoute = require('./routes/user')
 const examRoute = require('./routes/exam')
+const ealexamRoute = require('./routes/eal')
+
 
 app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
@@ -73,6 +75,8 @@ app.get('/', (req, res) => {
 
 app.use('/', userRoute)
 app.use('/', examRoute)
+app.use('/', ealexamRoute)
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

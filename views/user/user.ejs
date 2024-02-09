@@ -1,67 +1,5 @@
 <% layout('/layouts/boilerplate') -%>
     <link rel="stylesheet" href="/stylesheet/user.css">
-    <!--
-    <section class="h-custom">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-lg-8 col-xl-6">
-                    <div class="card rounded-3">
-                        <img src="/images/CleanBG.png" class="w-100"
-                            style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo">
-                        <div class="card-body p-4 p-md-5">
-                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
-
-                            <form action="/register" method="POST" class="px-md-2">
-
-                                <div class="form-outline mb-4">
-                                    <input type="text" id="form3Example1q" class="form-control" name="name" />
-                                    <label class="form-label" for="form3Example1q">Name</label>
-                                </div>
-
-
-                                <div class="col-md-6 mb-4">
-
-                                    <h6 class="mb-2 pb-1">Gender: </h6>
-
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="femaleGender"
-                                            value="Female" checked />
-                                        <label class="form-check-label" for="femaleGender">Female</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="maleGender"
-                                            value="Male" />
-                                        <label class="form-check-label" for="maleGender">Male</label>
-                                    </div>
-
-
-                                </div>
-
-
-
-
-                                <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
-                                    <div class="col-md-6">
-
-                                        <div class="form-outline">
-                                            <input type="text" id="form3Example1w" class="form-control" name="age" />
-                                            <label class="form-label" for="form3Example1w">Age</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <input type="hidden" id="quiz-score" name="score" value="">
-                                <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section class="">
         <div class="container">
@@ -112,6 +50,18 @@
                                                     id="maleGender" value="Male" />
                                                 <label class="form-check-label" for="maleGender">Male</label>
                                             </div>
+
+
+                                        </div>
+                                        <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                                            <select class="form-select" aria-label="Default select example"
+                                                name="program">
+                                                <option selected disabled>Programs</option>
+                                                <option value="English Young Learners">English Young Learners</option>
+                                                <option value="English Adult Learners">English Adult Learners</option>
+
+                                            </select>
 
 
                                         </div>

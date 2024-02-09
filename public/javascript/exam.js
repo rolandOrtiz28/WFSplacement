@@ -1,6 +1,7 @@
 const quizData = [
     {
         question: "Identify the plural form of the noun: 'Cat'",
+        instructions: "Identify the plural form of the noun",
         a: "Cats",
         b: "Caties",
         c: "Catzes",
@@ -9,6 +10,7 @@ const quizData = [
     },
     {
         question: "Choose the correct pronoun for 'Sheep':",
+        instructions: "Choose the correct pronoun",
         a: "Sheeps",
         b: "Her",
         c: "Its",
@@ -17,54 +19,61 @@ const quizData = [
     },
     {
         question: "Choose the correct verb to complete the sentence: 'He ___ his bicycle every day.'",
+        instructions: "Choose the correct verb to complete the sentence",
         a: "Do",
         b: "Does",
         c: "Doing",
         d: "Done",
         correct: "b"
     },
-    // {
-    //     question: "Select the verb in the sentence: 'The flowers ___ in the garden.'",
-    //     a: "Flowers",
-    //     b: "Is",
-    //     c: "In",
-    //     d: "Blooming",
-    //     correct: "d"
-    // },
-    // {
-    //     question: "Identify the action verb: 'The car ___ down the street.'",
-    //     a: "Car",
-    //     b: "Is",
-    //     c: "Down",
-    //     d: "Driving",
-    //     correct: "d"
-    // },
-    // {
-    //     question: "Choose the correct verb: 'We ___ to the beach last summer.'",
-    //     a: "Go",
-    //     b: "Went",
-    //     c: "Going",
-    //     d: "Goes",
-    //     correct: "b"
-    // },
-    // {
-    //     question: "Identify the adjective in the sentence: 'The big elephant has long tusks.'",
-    //     a: "Big",
-    //     b: "Elephant",
-    //     c: "Has",
-    //     d: "Long",
-    //     correct: "a"
-    // },
-    // {
-    //     question: "Choose the adjective to complete the sentence: 'The mountain is ___.'",
-    //     a: "High",
-    //     b: "Higher",
-    //     c: "Highest",
-    //     d: "Highly",
-    //     correct: "a"
-    // },
+    {
+        question: "Select the verb in the sentence: 'The flowers ___ in the garden.'",
+        instructions: "Select the verb in the sentence",
+        a: "Flowers",
+        b: "Is",
+        c: "In",
+        d: "Blooming",
+        correct: "d"
+    },
+    {
+        question: "Identify the action verb: 'The car ___ down the street.'",
+        instructions: "Identify the action verb",
+        a: "Car",
+        b: "Is",
+        c: "Down",
+        d: "Driving",
+        correct: "d"
+    },
+    {
+        question: "Choose the correct verb: 'We ___ to the beach last summer.'",
+        instructions: "Choose the correct verb",
+        a: "Go",
+        b: "Went",
+        c: "Going",
+        d: "Goes",
+        correct: "b"
+    },
+    {
+        question: "Identify the adjective in the sentence: 'The big elephant has long tusks.'",
+        instructions: "Identify the adjective in the sentence",
+        a: "Big",
+        b: "Elephant",
+        c: "Has",
+        d: "Long",
+        correct: "a"
+    },
+    {
+        question: "Choose the adjective to complete the sentence: 'The mountain is ___.'",
+        instructions: "Choose the adjective to complete the sentence",
+        a: "High",
+        b: "Higher",
+        c: "Highest",
+        d: "Highly",
+        correct: "a"
+    },
     // {
     //     question: "Select the adjective in the sentence: 'The yellow sun shines in the sky.'",
+    //     instructions: "Select the adjective in the sentence",
     //     a: "Yellow",
     //     b: "Sun",
     //     c: "Shines",
@@ -73,6 +82,7 @@ const quizData = [
     // },
     // {
     //     question: "Identify the descriptive adjective: 'The cozy blanket kept her warm.'",
+    //     instructions: "Identify the descriptive adjective",
     //     a: "Cozy",
     //     b: "Blanket",
     //     c: "Kept",
@@ -81,6 +91,7 @@ const quizData = [
     // },
     // {
     //     question: "Choose the adjective: 'The tired children took a nap.'",
+    //     instructions: "Choose the adjective",
     //     a: "Tired",
     //     b: "Children",
     //     c: "Took",
@@ -89,6 +100,7 @@ const quizData = [
     // },
     // {
     //     question: "Choose the correct possessive pronoun: 'This is ____ book.'",
+    //     instructions: "Choose the correct possessive pronoun",
     //     a: "My",
     //     b: "I",
     //     c: "Me",
@@ -97,6 +109,7 @@ const quizData = [
     // },
     // {
     //     question: "Identify the adverb in the sentence: 'She speaks softly.'",
+    //     instructions: "Identify the adverb in the sentence",
     //     a: "She",
     //     b: "Speaks",
     //     c: "Softly",
@@ -105,6 +118,7 @@ const quizData = [
     // },
     // {
     //     question: "Select the comparative adjective: 'The elephant is ___ than the giraffe.'",
+    //     instructions: "Select the comparative adjective",
     //     a: "Big",
     //     b: "Bigger",
     //     c: "Biggest",
@@ -113,6 +127,7 @@ const quizData = [
     // },
     // {
     //     question: "Choose the correct past tense verb: 'He ____ to the store yesterday.'",
+    //     instructions: "Choose the correct past tense verb",
     //     a: "Go",
     //     b: "Goes",
     //     c: "Going",
@@ -121,6 +136,7 @@ const quizData = [
     // },
     // {
     //     question: "Identify the conjunction in the sentence: 'I like ice cream, ___ I prefer chocolate.'",
+    //     instructions: "Identify the conjunction in the sentence",
     //     a: "And",
     //     b: "Or",
     //     c: "But",
@@ -129,6 +145,7 @@ const quizData = [
     // },
     // {
     //     question: "Select the plural form of 'Fox':",
+    //     instructions: "Select the plural form of the noun",
     //     a: "Foxes",
     //     b: "Foxies",
     //     c: "Fox's",
@@ -137,6 +154,7 @@ const quizData = [
     // },
     // {
     //     question: "Choose the correct possessive pronoun: 'This toy is ____.'",
+    //     instructions: "Choose the correct possessive pronoun",
     //     a: "Hers",
     //     b: "She's",
     //     c: "Its",
@@ -145,6 +163,7 @@ const quizData = [
     // },
     // {
     //     question: "Identify the verb in the sentence: 'The cat ____ on the roof.'",
+    //     instructions: "Identify the verb in the sentence",
     //     a: "Cat",
     //     b: "Is",
     //     c: "On",
@@ -153,6 +172,7 @@ const quizData = [
     // },
     // {
     //     question: "Pick the correct adverb: 'She ran ___ to catch the bus.'",
+    //     instructions: "Pick the correct adverb",
     //     a: "Fast",
     //     b: "Faster",
     //     c: "Fastest",
@@ -161,6 +181,7 @@ const quizData = [
     // },
     // {
     //     question: "Choose the correct plural form of 'Tomato':",
+    //     instructions: "Choose the correct plural form of the noun",
     //     a: "Tomatoes",
     //     b: "Tomatos",
     //     c: "Tomato's",
@@ -169,6 +190,7 @@ const quizData = [
     // },
     // {
     //     question: "Which sentence contains the correct comparative adjective?",
+    //     instructions: "Which sentence contains the correct comparative adjective",
     //     a: "The car is more faster than the bicycle.",
     //     b: "The car is fastly than the bicycle.",
     //     c: "The car is faster than the bicycle.",
@@ -177,6 +199,7 @@ const quizData = [
     // },
     // {
     //     question: "Choose the correct comparative adjective to complete the sentence: 'The river is _____ than the stream.'",
+    //     instructions: "Choose the correct comparative adjective to complete the sentence",
     //     a: "wider",
     //     b: "wide",
     //     c: "more wider",
@@ -185,6 +208,7 @@ const quizData = [
     // },
     // {
     //     question: "Identify the sentence with the correct comparative form: 'Her grades are getting _____ every semester.'",
+    //     instructions: "Identify the sentence with the correct comparative form",
     //     a: "good",
     //     b: "more good",
     //     c: "better",
@@ -193,6 +217,7 @@ const quizData = [
     // },
     // {
     //     question: "In the comparison of intelligence, which phrase is grammatically correct?",
+    //     instructions: "In the comparison of intelligence, which phrase is grammatically correct",
     //     a: "The dolphin is smarter than any other sea creature.",
     //     b: "The dolphin is more smart than any other sea creature.",
     //     c: "The dolphin is smartly than any other sea creature.",
@@ -201,6 +226,7 @@ const quizData = [
     // },
     // {
     //     question: "Choose the appropriate comparative form to complete the sentence: 'This task is _____ than the one we did last week.'",
+    //     instructions: "Choose the appropriate comparative form to complete the sentence",
     //     a: "more difficult",
     //     b: "difficulter",
     //     c: "difficulter",
@@ -209,6 +235,7 @@ const quizData = [
     // },
     // {
     //     question: "______ is coming to the party tonight?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "What",
     //     b: "Who",
     //     c: "Where",
@@ -217,6 +244,7 @@ const quizData = [
     // },
     // {
     //     question: "______ did you go on your last vacation?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Where",
     //     b: "Why",
     //     c: "What",
@@ -225,6 +253,7 @@ const quizData = [
     // },
     // {
     //     question: "I wonder ______ the keys are?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -233,6 +262,7 @@ const quizData = [
     // },
     // {
     //     question: "______ are you crying?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Where",
     //     b: "Who",
     //     c: "Why",
@@ -241,6 +271,7 @@ const quizData = [
     // },
     // {
     //     question: "I asked him ______ he was leaving so soon.",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Where",
     //     b: "Why",
     //     c: "Who",
@@ -249,6 +280,7 @@ const quizData = [
     // },
     // {
     //     question: "I wonder ______ the cat went?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -257,6 +289,7 @@ const quizData = [
     // },
     // {
     //     question: "______ does the sun rise?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -265,6 +298,7 @@ const quizData = [
     // },
     // {
     //     question: "I asked him ______ he was feeling.",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -273,6 +307,7 @@ const quizData = [
     // },
     // {
     //     question: "______ will you celebrate your birthday?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -281,6 +316,7 @@ const quizData = [
     // },
     // {
     //     question: "______ is your favorite color?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -289,6 +325,7 @@ const quizData = [
     // },
     // {
     //     question: "______ are you smiling?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -297,6 +334,7 @@ const quizData = [
     // },
     // {
     //     question: "Tell me ______ you like about this book.",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
@@ -305,13 +343,13 @@ const quizData = [
     // },
     // {
     //     question: "______ does the train go so fast?",
+    //     instructions: "Choose the correct interrogative pronoun",
     //     a: "Who",
     //     b: "Where",
     //     c: "What",
     //     d: "Why",
     //     correct: "d"
     // }
-
 ];
 
 const quiz = document.getElementById('quiz')
@@ -335,7 +373,7 @@ function loadQuiz() {
 
     const currentQuizData = quizData[currentQuiz]
 
-    questionEl.innerHTML = `<h5 class="badge bg-primary rounded-pill me-2">${currentQuiz + 1}</h5>${currentQuizData.question}`;
+    questionEl.innerHTML = `<p class:"text-muted" style="font-size: 15px; color:gray;">${currentQuizData.instructions}</p><h5 class="badge bg-primary rounded-pill me-2">${currentQuiz + 1}</h5>${currentQuizData.question}`;
     a_text.innerText = `a) ${currentQuizData.a}`
     b_text.innerText = `b) ${currentQuizData.b}`
     c_text.innerText = `c) ${currentQuizData.c}`
@@ -391,14 +429,13 @@ submitBtn.addEventListener('click', () => {
 });
 
 
+
 function submitScore(score, percentage, qualification) {
-    // Assuming you're using AJAX for submitting the form
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/examination');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {
-        // Redirect to result page or do something else
         window.location.href = '/thankyou';
     };
-    xhr.send(JSON.stringify({ score: score, percentage: percentage, qualification: qualification }));
+    xhr.send(JSON.stringify({ userId: userId, score: score, percentage: percentage, qualification: qualification }));
 }

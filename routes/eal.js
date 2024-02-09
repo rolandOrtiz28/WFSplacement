@@ -1,16 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const User = require('../Model/user')
-const nodemailer = require('nodemailer');
+const User = require('../Model/user');
+const user = require("../Model/user");
 
-router.get('/examination', async (req, res) => {
+router.get('/examinationeal', async (req, res) => {
     const user = req.session.user; // Adjust this line based on where your user object is stored
     console.log(user)
-    res.render('./exam/exam', { user: user });
+    res.render('./exam/eal', { user: user })
 })
 
 
-router.post('/examination', async (req, res) => {
+
+
+router.post('/examinationeal', async (req, res) => {
     const { userId, score, percentage, qualification } = req.body;
 
     try {
@@ -28,8 +30,6 @@ router.post('/examination', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
-
-
 
 
 router.get('/thankyou', (req, res) => {

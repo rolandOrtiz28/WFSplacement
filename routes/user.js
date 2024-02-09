@@ -9,14 +9,24 @@ router.get('/register', async (req, res) => {
 
 
 router.post('/register', async (req, res) => {
-    await User.deleteMany({})
-    const { name, age, gender } = req.body;
-    const user = new User({ name, age, gender })
-    console.log(user)
-    user.save()
-    req.session.user_id = user._id;
-    res.redirect('/examination')
-})
+    await User.deleteMany({});
+    const { name, age, gender, program } = req.body;
+    const user = new User({ name, age, gender, program });
+    console.log(user);
+    await user.save();
+
+    req.session.user = user;
+    // Redirect based on the selected program
+    if (program === "English Young Learners") {
+        res.redirect('/examination');
+    } else if (program === "English Adult Learners") {
+        res.redirect('/examinationeal');
+    } else {
+        // Handle invalid program selection
+        res.status(400).send("Invalid program selection");
+    }
+});
+
 
 
 

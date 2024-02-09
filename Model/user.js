@@ -15,6 +15,10 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
+    program: {
+        type: String,
+        required: true,
+    },
     score: {
         type: Number
     },
