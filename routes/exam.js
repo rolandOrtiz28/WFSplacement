@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require('../Model/user')
 const nodemailer = require('nodemailer');
+const catchAsync = require('../utils/catchAsync');
 
 router.get('/examination', async (req, res) => {
     const user = req.session.user; // Adjust this line based on where your user object is stored
@@ -10,7 +11,7 @@ router.get('/examination', async (req, res) => {
 })
 
 
-router.post('/examination', async (req, res) => {
+router.post('/examination', catchAsync(async (req, res) => {
     const { userId, score, percentage, qualification } = req.body;
 
     try {
@@ -27,7 +28,7 @@ router.post('/examination', async (req, res) => {
         console.error(error);
         res.status(500).send('Internal Server Error');
     }
-});
+}));
 
 
 

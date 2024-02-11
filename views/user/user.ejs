@@ -14,12 +14,12 @@
                             <div class="col-xl-6">
                                 <div class="card-body p-md-5 text-black">
                                     <h3 class="mb-5 text-uppercase">Student registration form</h3>
-                                    <form action="/register" method="POST" class="px-md-2">
+                                    <form action="/register" method="POST" class="px-md-2 needs-validation" novalidate>
                                         <div class="row">
 
                                             <div class="form-outline">
                                                 <input type="text" id="form3Example1m"
-                                                    class="form-control form-control-lg" name="name" />
+                                                    class="form-control form-control-lg" name="name" required/>
                                                 <label class="form-label" for="form3Example1m">Full Name</label>
                                             </div>
 
@@ -28,7 +28,7 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <input type="text" id="form3Example1m"
-                                                    class="form-control form-control-lg" name="age" />
+                                                    class="form-control form-control-lg" name="age" required/>
                                                 <label class="form-label" for="form3Example1m">Age</label>
                                             </div>
                                         </div>
@@ -41,13 +41,13 @@
 
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="gender"
-                                                    id="femaleGender" value="Female" checked />
+                                                    id="femaleGender" value="Female" checked required/>
                                                 <label class="form-check-label" for="femaleGender">Female</label>
                                             </div>
 
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="gender"
-                                                    id="maleGender" value="Male" />
+                                                    id="maleGender" value="Male" required/>
                                                 <label class="form-check-label" for="maleGender">Male</label>
                                             </div>
 
@@ -56,7 +56,7 @@
                                         <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
 
                                             <select class="form-select" aria-label="Default select example"
-                                                name="program">
+                                                name="program" required>
                                                 <option selected disabled>Programs</option>
                                                 <option value="English Young Learners">English Young Learners</option>
                                                 <option value="English Adult Learners">English Adult Learners</option>
@@ -84,3 +84,28 @@
             </div>
         </div>
     </section>
+
+
+    <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+    </script>
