@@ -6,27 +6,34 @@ const UserSchema = new Schema({
     name: {
         type: String,
         required: true,
+        unique: false,
     },
     age: {
         type: Number,
         required: true,
+        unique: false,
     },
     gender: {
         type: String,
         required: true,
+        unique: false,
     },
     program: {
         type: String,
         required: true,
+        unique: false,
     },
     score: {
-        type: Number
+        type: Number,
+        unique: false,
     },
     percentage: {
-        type: Number
+        type: Number,
+        unique: false,
     },
     qualification: {
-        type: String
+        type: String,
+        unique: false
     }
 
 
