@@ -9,7 +9,7 @@ const session = require('express-session')
 const MongoDBStore = require("connect-mongo");
 const ejsMate = require('ejs-mate')
 const mongoSanitize = require('express-mongo-sanitize');
-const ExpressError = require('./utils/expressError');
+const ExpressError = require('./utils/ExpressError');
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/wfsplacement'
 const helmet = require('helmet')
 
