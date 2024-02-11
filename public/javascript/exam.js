@@ -387,7 +387,7 @@ const quizData = [
         correct: "d"
     },
     {
-        question: "Choose the adjective in the sentence: 'The sky is blue.'",
+        question: "The sky is blue.",
         instructions: "Identify the adjective in the sentence",
         a: "The",
         b: "Sky",
@@ -439,7 +439,18 @@ const quizData = [
         c: "What",
         d: "Who",
         correct: "a"
+    },
+    {
+        question: "What is the plural form of 'Mouse'?",
+        instructions: "Select the correct plural form of the noun",
+        a: "Mice",
+        b: "Mouses",
+        c: "Mices",
+        d: "Mouse's",
+        correct: "a"
+
     }
+    
 ];
 
 const quiz = document.getElementById('quiz')
