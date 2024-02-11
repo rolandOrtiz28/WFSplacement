@@ -83,7 +83,9 @@
                         <%= user.program %>
                     </td>
                     <td>
-                        <%= user.createdAt.toLocaleString() %>
+                        <td>
+                            <%= user.createdAt?.toLocaleString() || 'N/A' %>
+                        </td>
                     </td>
                     <td>
                         <%= user.score %>
