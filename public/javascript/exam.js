@@ -349,6 +349,96 @@ const quizData = [
         c: "What",
         d: "Why",
         correct: "d"
+    },
+    {
+        question: "What is the plural form of 'Child'?",
+        instructions: "Select the correct plural form of the noun",
+        a: "Childs",
+        b: "Childs",
+        c: "Children",
+        d: "Childes",
+        correct: "c"
+    },
+    {
+        question: "Choose the correct possessive pronoun for 'They':",
+        instructions: "Choose the correct possessive pronoun",
+        a: "They're",
+        b: "Theirs",
+        c: "Them",
+        d: "Their",
+        correct: "d"
+    },
+    {
+        question: "She ____ her sister every weekend.",
+        instructions: "Select the correct verb to complete the sentence",
+        a: "Visit",
+        b: "Visits",
+        c: "Visited",
+        d: "Visiting",
+        correct: "b"
+    },
+    {
+        question: "The bird ___ in the tree.",
+        instructions: "Identify the action verb",
+        a: "Bird",
+        b: "Is",
+        c: "In",
+        d: "Sitting",
+        correct: "d"
+    },
+    {
+        question: "Choose the adjective in the sentence: 'The sky is blue.'",
+        instructions: "Identify the adjective in the sentence",
+        a: "The",
+        b: "Sky",
+        c: "Is",
+        d: "Blue",
+        correct: "d"
+    },
+    {
+        question: "Which is the correct past tense of the verb 'Swim'?",
+        instructions: "Choose the correct past tense verb",
+        a: "Swims",
+        b: "Swum",
+        c: "Swam",
+        d: "Swiming",
+        correct: "c"
+    },
+    {
+        question: "I need to buy ___ apples.",
+        instructions: "Choose the correct determiner to complete the sentence",
+        a: "Some",
+        b: "Many",
+        c: "Few",
+        d: "Much",
+        correct: "a"
+    },
+    {
+        question: "He sings ____ than his brother.",
+        instructions: "Select the correct comparative form of the adverb",
+        a: "Good",
+        b: "Better",
+        c: "Best",
+        d: "Well",
+        correct: "b"
+    },
+    {
+        question: "The movie was ___ I expected.",
+        instructions: "Identify the adverb in the sentence",
+        a: "More",
+        b: "Interesting",
+        c: "Than",
+        d: "Than",
+        correct: "a"
+    },
+    {
+        question: "______ did you last see him?",
+        instructions: "Choose the correct interrogative pronoun",
+        a: "When",
+        b: "Why",
+        c: "What",
+        d: "Who",
+        correct: "a"
     }
 ];
 
