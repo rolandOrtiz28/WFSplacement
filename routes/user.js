@@ -10,8 +10,8 @@ router.get('/register', async (req, res) => {
 
 router.post('/register', catchAsync(async (req, res) => {
 
-    const { name, age, gender, program } = req.body;
-    const user = new User({ name, age, gender, program });
+    const { name, age, gender, program, school } = req.body;
+    const user = new User({ name, age, gender, program, school });
     console.log(user);
     await user.save();
 
