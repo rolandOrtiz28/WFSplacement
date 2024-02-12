@@ -294,7 +294,7 @@ const quizData = [
         b: "Where",
         c: "What",
         d: "Why",
-        correct: "c"
+        correct: "b"
     },
     {
         question: "I asked him ______ he was feeling.",
@@ -474,7 +474,7 @@ function loadQuiz() {
 
     const currentQuizData = quizData[currentQuiz]
 
-    questionEl.innerHTML = `<p class:"text-muted" style="font-size: 15px; color:gray;">${currentQuizData.instructions}</p><h5 class="badge bg-primary rounded-pill me-2">${currentQuiz + 1}</h5>${currentQuizData.question}`;
+    questionEl.innerHTML = `<p class:"text-muted font-weight-bold" style="font-size: 17px; color:black;">${currentQuizData.instructions}</p><h5 class="badge bg-primary rounded-pill me-2">${currentQuiz + 1}</h5>${currentQuizData.question}`;
     a_text.innerText = `a) ${currentQuizData.a}`
     b_text.innerText = `b) ${currentQuizData.b}`
     c_text.innerText = `c) ${currentQuizData.c}`
@@ -495,39 +495,7 @@ function getSelected() {
     return answer
 }
 
-// submitBtn.addEventListener('click', () => {
-//     const answer = getSelected();
-//     if (answer) {
-//         if (answer === quizData[currentQuiz].correct) {
-//             score++;
-//         }
 
-//         currentQuiz++;
-
-//         if (currentQuiz < quizData.length) {
-//             loadQuiz();
-//         } else {
-//             const percentage = ((score / quizData.length) * 100).toFixed(2);
-
-//             // Determine qualification
-//             let qualification;
-//             if (percentage >= 1 && percentage <= 25) {
-//                 qualification = 'EYL-1';
-//             } else if (percentage > 25 && percentage <= 50) {
-//                 qualification = 'EYL-2';
-//             } else if (percentage > 50 && percentage <= 75) {
-//                 qualification = 'EYL-3';
-//             } else if (percentage > 75 && percentage <= 100) {
-//                 qualification = 'EYL-4';
-//             } else {
-//                 qualification = 'Not Qualified';
-//             }
-
-//             // Send score, percentage, and qualification to the backend
-//             submitScore(score, percentage, qualification);
-//         }
-//     }
-// });
 submitBtn.addEventListener('click', () => {
     const answer = getSelected();
     if (answer) {
