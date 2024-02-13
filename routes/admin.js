@@ -79,20 +79,34 @@ router.get('/logout', (req, res, next) => {
 })
 
 
-router.get('/:id', async (req, res) => {
+router.get('/washingtonfirst/:id', async (req, res) => {
     try {
-        const user = await User.findById(req.params.id)
+        const user = await User.findById(req.params.id);
         if (!user) {
-            req.flash('error', "No user found")
-            res.redirect('/placement/admin')
+            req.flash('error', "No user found");
+            return res.redirect('/placement/admin');
         }
-        res.render('./admin/form', { user })
-    } catch {
-
+        res.render('./admin/form', { user });
+    } catch (error) {
+        // Handle errors
+        console.error(error);
+        res.status(500).send('Internal Server Error');
     }
-
-
-})
+});
+router.get('/dc/:id', async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        if (!user) {
+            req.flash('error', "No user found");
+            return res.redirect('/placement/admin');
+        }
+        res.render('./admin/form2', { user });
+    } catch (error) {
+        // Handle errors
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
 
 
 
