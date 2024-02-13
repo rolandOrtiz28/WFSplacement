@@ -59,9 +59,7 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
-                <% if (users && users.length) { %>
-                    <% users.forEach(function(user, index) { %>
-                        <% if (user && user.school && user.school.includes("Washington First School")) { %>
+                
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -80,7 +78,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    <% if (users && users.length) { %>
+                                        <% users.forEach(function(user, index) { %>
+                                            <% if (user && user.school && user.school.includes("Washington First School")) { %>
                                     <tr style="color: #800000;">
                                         <th scope="row">
                                             <%= index + 1 %>
@@ -123,26 +123,23 @@
                                         </td>
                                         <td>
 
-                                            <a href="/placement/<%= user._id %>" class="btn btn-primary mt-2">More
-                                                Info</a>
+                                            <a href="/placement/<%= user._id %>" class="" style="font-style: none;color: #800000;">Print Result</a>
 
                                         </td>
                                     </tr>
-
+                                    <% } %>
+                                    <% }) %>
+                                        <% } else { %>
+                                            <p class="text-center mt-5">No users found.</p>
+                                            <% } %>
+    
                                 </tbody>
                             </table>
-                            <% } %>
-                                <% }) %>
-                                    <% } else { %>
-                                        <p class="text-center mt-5">No users found.</p>
-                                        <% } %>
-
+                            
 
             </div>
             <div class="tab-pane fade" id="dc" role="tabpanel" aria-labelledby="dc-tab">
-                <% if (users && users.length) { %>
-                    <% users.forEach(function(user, index) { %>
-                        <% if (user && user.school && user.school.includes("Washington D.C International School")) { %>
+                
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -160,7 +157,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    <% if (users && users.length) { %>
+                                        <% users.forEach(function(user, index) { %>
+                                            <% if (user && user.school && user.school.includes("Washington D.C International School")) { %>
                                     <tr style="color: #800000;">
                                         <th scope="row">
                                             <%= index + 1 %>
@@ -201,16 +200,21 @@
                                                 </button>
                                             </form>
                                         </td>
-                                    </tr>
+                                        <td>
 
+                                            <a href="/<%= user._id %>" class=" ">Print Result</a>
+
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                    <% }) %>
+                                        <% } else { %>
+                                            <p class="text-center mt-5">No users found.</p>
+                                            <% } %>
+    
                                 </tbody>
                             </table>
-                            <% } %>
-                                <% }) %>
-                                    <% } else { %>
-                                        <p class="text-center mt-5">No users found.</p>
-                                        <% } %>
-
+                          
 
             </div>
 

@@ -81,7 +81,7 @@ router.get('/logout', (req, res, next) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const user = await User.findById(req.param.id)
+        const user = await User.findById(req.params.id)
         if (!user) {
             req.flash('error', "No user found")
             res.redirect('/placement/admin')
