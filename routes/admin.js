@@ -21,7 +21,6 @@ router.get('/adminlogin', (req, res) => {
 })
 
 router.post('/adminregister', catchAsync(async (req, res) => {
-    await Admin.deleteMany({})
     try {
         const { email, username, password } = req.body;
         const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
@@ -51,7 +50,7 @@ router.post('/adminregister', catchAsync(async (req, res) => {
             req.login(registeredUser, err => {
                 if (err) return next(err);
                 req.flash('success', `Welcome Admin ${username}`)
-                res.redirect('/placement/adminlogin')
+                res.redirect('/placement/admin')
             })
 
         }
@@ -59,14 +58,25 @@ router.post('/adminregister', catchAsync(async (req, res) => {
         req.flash('error', e.message);
         res.redirect('/placement/adminregisterwashingtonschool123456789')
     }
-    router.post('/login', passport.authenticate('local', { failureFlash: true, failureRedirect: '/adminlogin', keepSessionInfo: true }), (req, res) => {
-        req.flash('success', "Welcome Admin")
-        res.redirect('/placement/admin')
-    })
-
 
 }))
+router.post('/login', passport.authenticate('local', {
+    failureFlash: true,
+    failureRedirect: '/placement/adminlogin',
+    keepSessionInfo: true
+}), (req, res) => {
 
+    req.flash('success', "Welcome Admin");
+    res.redirect('/placement/admin');
+});
+
+router.get('/logout', (req, res, next) => {
+    req.logout(function (err) {
+        if (err) { return next(err); }
+        req.flash('success', "Goodbye!");
+        res.redirect('/');
+    });
+})
 
 
 

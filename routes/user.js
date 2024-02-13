@@ -27,12 +27,16 @@ router.post('/register', catchAsync(async (req, res) => {
     }
 }));
 
-router.delete('/:id',catchAsync(async (req, res) => {
+router.delete('/:id', catchAsync(async (req, res) => {
     const { id } = req.params;
     await User.findByIdAndDelete(id);
     res.redirect('/placement/admin');
 
 }))
+
+
+
+
 
 
 
