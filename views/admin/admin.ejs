@@ -1,204 +1,210 @@
 <% layout('/layouts/boilerplate') -%>
-<style>
-.btn {
-  background-color: transparent;
-  position: relative;
-  border: none;
-}
+    <style>
+        .btn {
+            background-color: transparent;
+            position: relative;
+            border: none;
+        }
 
-.btn::after {
-  content: 'delete';
-  position: absolute;
-  top: -130%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
-  height: fit-content;
-  background-color: rgb(168, 7, 7);
-  padding: 4px 8px;
-  border-radius: 5px;
-  transition: .2s linear;
-  transition-delay: .2s;
-  color: white;
-  text-transform: uppercase;
-  font-size: 12px;
-  opacity: 0;
-  visibility: hidden;
-}
+        .btn::after {
+            content: 'delete';
+            position: absolute;
+            top: -130%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(168, 7, 7);
+            padding: 4px 8px;
+            border-radius: 5px;
+            transition: .2s linear;
+            transition-delay: .2s;
+            color: white;
+            text-transform: uppercase;
+            font-size: 12px;
+            opacity: 0;
+            visibility: hidden;
+        }
 
-.icon {
-  transform: scale(1.2);
-  transition: .2s linear;
-}
+        .icon {
+            transform: scale(1.2);
+            transition: .2s linear;
+        }
 
-.btn:hover > .icon {
-  transform: scale(1.5);
-}
+        .btn:hover>.icon {
+            transform: scale(1.5);
+        }
 
-.btn:hover > .icon path {
-  fill: rgb(168, 7, 7);
-}
+        .btn:hover>.icon path {
+            fill: rgb(168, 7, 7);
+        }
 
-.btn:hover::after {
-  visibility: visible;
-  opacity: 1;
-  top: -80%;
-}
+        .btn:hover::after {
+            visibility: visible;
+            opacity: 1;
+            top: -80%;
+        }
+    </style>
+    <%- include('../partials/navbar') %>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first"
+                    type="button" role="tab" aria-controls="first" aria-selected="true">Washington First School</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="dc-tab" data-bs-toggle="tab" data-bs-target="#dc" type="button" role="tab"
+                    aria-controls="dc" aria-selected="false">Washington D.C</button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                <% if (users && users.length) { %>
+                    <% users.forEach(function(user, index) { %>
+                        <% if (user && user.school && user.school.includes("Washington First School")) { %>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Age</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Program</th>
+                                        <th scope="col">Reg. Date</th>
+                                        <th scope="col">Score</th>
+                                        <th scope="col">Percentage</th>
+                                        <th scope="col">Qualification</th>
+                                        <th scope="col">Update</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr style="color: #800000;">
+                                        <th scope="row">
+                                            <%= index + 1 %>
+                                        </th>
+                                        <td>
+                                            <%= user.name %>
+                                        </td>
+                                        <td>
+                                            <%= user.age %>
+                                        </td>
+                                        <td>
+                                            <%= user.gender %>
+                                        </td>
+                                        <td>
+                                            <%= user.program %>
+                                        </td>
+                                        <td>
+                                            <%= user.createdAt?.toLocaleString() || 'N/A' %>
+                                        </td>
+                                        <td>
+                                            <%= user.score %>
+                                        </td>
+                                        <td>
+                                            <%= user.percentage %> %
+                                        </td>
+                                        <td>
+                                            <%= user.qualification %>
+                                        </td>
+                                        <td>
+                                            <form class="d-inline" action="/<%=user._id%>?_method=DELETE" method="post">
+                                                <button class="btn">
+                                                    <svg viewBox="0 0 15 17.5" height="17.5" width="15"
+                                                        xmlns="http://www.w3.org/2000/svg" class="icon">
+                                                        <path transform="translate(-2.5 -1.25)"
+                                                            d="M15,18.75H5A1.251,1.251,0,0,1,3.75,17.5V5H2.5V3.75h15V5H16.25V17.5A1.251,1.251,0,0,1,15,18.75ZM5,5V17.5H15V5Zm7.5,10H11.25V7.5H12.5V15ZM8.75,15H7.5V7.5H8.75V15ZM12.5,2.5h-5V1.25h5V2.5Z"
+                                                            id="Fill"></path>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <% } %>
+                                <% }) %>
+                                    <% } else { %>
+                                        <p class="text-center mt-5">No users found.</p>
+                                        <% } %>
 
 
-</style>
+            </div>
+            <div class="tab-pane fade" id="dc" role="tabpanel" aria-labelledby="dc-tab">
+                <% if (users && users.length) { %>
+                    <% users.forEach(function(user, index) { %>
+                        <% if (user && user.school && user.school.includes("Washington D.C International School")) { %>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Age</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Program</th>
+                                        <th scope="col">Reg. Date</th>
+                                        <th scope="col">Score</th>
+                                        <th scope="col">Percentage</th>
+                                        <th scope="col">Qualification</th>
+                                        <th scope="col">Update</th>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first" type="button" role="tab" aria-controls="first" aria-selected="true">Washington First School</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="dc-tab" data-bs-toggle="tab" data-bs-target="#dc" type="button" role="tab" aria-controls="dc" aria-selected="false">Washington D.C</button>
-        </li>
-        
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
-            <% if (users && users.length) { %>
-                <% users.forEach(function(user, index) { %>
-                    <% if (user && user.school && user.school.includes("Washington First School")) { %>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Program</th>
-                            <th scope="col">Reg. Date</th>
-                            <th scope="col">Score</th>
-                            <th scope="col">Percentage</th>
-                            <th scope="col">Qualification</th>
-                            <th scope="col">Update</th>
-            
-                        </tr>
-                    </thead>
-                    <tbody>
-                       
-                            <tr style="color: #800000;">
-                                <th scope="row">
-                                    <%= index + 1 %>
-                                </th>
-                                <td>
-                                    <%= user.name %>
-                                </td>
-                                <td>
-                                    <%= user.age %>
-                                </td>
-                                <td>
-                                    <%= user.gender %>
-                                </td>
-                                <td>
-                                    <%= user.program %>
-                                </td>
-                                <td>
-                                    <%= user.createdAt?.toLocaleString() || 'N/A' %>
-                                </td>
-                                <td>
-                                    <%= user.score %>
-                                </td>
-                                <td>
-                                    <%= user.percentage %> %
-                                </td>
-                                <td>
-                                    <%= user.qualification %>
-                                </td>
-                                <td>
-                                    <form class="d-inline" action="/<%=user._id%>?_method=DELETE" method="post">
-                                        <button class="btn">
-                                            <svg viewBox="0 0 15 17.5" height="17.5" width="15" xmlns="http://www.w3.org/2000/svg" class="icon">
-                                            <path transform="translate(-2.5 -1.25)" d="M15,18.75H5A1.251,1.251,0,0,1,3.75,17.5V5H2.5V3.75h15V5H16.25V17.5A1.251,1.251,0,0,1,15,18.75ZM5,5V17.5H15V5Zm7.5,10H11.25V7.5H12.5V15ZM8.75,15H7.5V7.5H8.75V15ZM12.5,2.5h-5V1.25h5V2.5Z" id="Fill"></path>
-                                          </svg>
-                                          </button>
-                                    </form>
-                                </td>
-                            </tr>
-                           
-                    </tbody>
-                </table>
-                <% } %>
-                <% }) %>
-                <% } else { %>
-                    <p class="text-center mt-5">No users found.</p>
-                <% } %>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
+                                    <tr style="color: #800000;">
+                                        <th scope="row">
+                                            <%= index + 1 %>
+                                        </th>
+                                        <td>
+                                            <%= user.name %>
+                                        </td>
+                                        <td>
+                                            <%= user.age %>
+                                        </td>
+                                        <td>
+                                            <%= user.gender %>
+                                        </td>
+                                        <td>
+                                            <%= user.program %>
+                                        </td>
+                                        <td>
+                                            <%= user.createdAt?.toLocaleString() || 'N/A' %>
+                                        </td>
+                                        <td>
+                                            <%= user.score %>
+                                        </td>
+                                        <td>
+                                            <%= user.percentage %> %
+                                        </td>
+                                        <td>
+                                            <%= user.qualification %>
+                                        </td>
+                                        <td>
+                                            <form class="d-inline" action="/<%=user._id%>?_method=DELETE" method="post">
+                                                <button class="btn">
+                                                    <svg viewBox="0 0 15 17.5" height="17.5" width="15"
+                                                        xmlns="http://www.w3.org/2000/svg" class="icon">
+                                                        <path transform="translate(-2.5 -1.25)"
+                                                            d="M15,18.75H5A1.251,1.251,0,0,1,3.75,17.5V5H2.5V3.75h15V5H16.25V17.5A1.251,1.251,0,0,1,15,18.75ZM5,5V17.5H15V5Zm7.5,10H11.25V7.5H12.5V15ZM8.75,15H7.5V7.5H8.75V15ZM12.5,2.5h-5V1.25h5V2.5Z"
+                                                            id="Fill"></path>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <% } %>
+                                <% }) %>
+                                    <% } else { %>
+                                        <p class="text-center mt-5">No users found.</p>
+                                        <% } %>
+
+
+            </div>
 
         </div>
-        <div class="tab-pane fade" id="dc" role="tabpanel" aria-labelledby="dc-tab">
-            <% if (users && users.length) { %>
-                <% users.forEach(function(user, index) { %>
-                    <% if (user && user.school && user.school.includes("Washington D.C International School")) { %>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Program</th>
-                            <th scope="col">Reg. Date</th>
-                            <th scope="col">Score</th>
-                            <th scope="col">Percentage</th>
-                            <th scope="col">Qualification</th>
-                            <th scope="col">Update</th>
-            
-                        </tr>
-                    </thead>
-                    <tbody>
-                       
-                            <tr style="color: #800000;">
-                                <th scope="row">
-                                    <%= index + 1 %>
-                                </th>
-                                <td>
-                                    <%= user.name %>
-                                </td>
-                                <td>
-                                    <%= user.age %>
-                                </td>
-                                <td>
-                                    <%= user.gender %>
-                                </td>
-                                <td>
-                                    <%= user.program %>
-                                </td>
-                                <td>
-                                    <%= user.createdAt?.toLocaleString() || 'N/A' %>
-                                </td>
-                                <td>
-                                    <%= user.score %>
-                                </td>
-                                <td>
-                                    <%= user.percentage %> %
-                                </td>
-                                <td>
-                                    <%= user.qualification %>
-                                </td>
-                                <td>
-                                    <form class="d-inline" action="/<%=user._id%>?_method=DELETE" method="post">
-                                        <button class="btn">
-                                            <svg viewBox="0 0 15 17.5" height="17.5" width="15" xmlns="http://www.w3.org/2000/svg" class="icon">
-                                            <path transform="translate(-2.5 -1.25)" d="M15,18.75H5A1.251,1.251,0,0,1,3.75,17.5V5H2.5V3.75h15V5H16.25V17.5A1.251,1.251,0,0,1,15,18.75ZM5,5V17.5H15V5Zm7.5,10H11.25V7.5H12.5V15ZM8.75,15H7.5V7.5H8.75V15ZM12.5,2.5h-5V1.25h5V2.5Z" id="Fill"></path>
-                                          </svg>
-                                          </button>
-                                    </form>
-                                </td>
-                            </tr>
-                           
-                    </tbody>
-                </table>
-                <% } %>
-                <% }) %>
-                <% } else { %>
-                    <p class="text-center mt-5">No users found.</p>
-                <% } %>
-
-
-        </div>
-      
-      </div>
