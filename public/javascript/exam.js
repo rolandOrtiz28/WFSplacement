@@ -26,431 +26,431 @@ const quizData = [
         d: "Done",
         correct: "b"
     },
-    {
-        question: "The flowers ___ in the garden.",
-        instructions: "Select the verb in the sentence",
-        a: "Flowers",
-        b: "Is",
-        c: "In",
-        d: "Blooming",
-        correct: "d"
-    },
-    {
-        question: "The car ___ down the street.",
-        instructions: "Identify the action verb",
-        a: "Car",
-        b: "Is",
-        c: "Down",
-        d: "Driving",
-        correct: "d"
-    },
-    {
-        question: "We ___ to the beach last summer.",
-        instructions: "Choose the correct verb",
-        a: "Go",
-        b: "Went",
-        c: "Going",
-        d: "Goes",
-        correct: "b"
-    },
-    {
-        question: "The big elephant has long tusks.",
-        instructions: "Identify the adjective in the sentence",
-        a: "Big",
-        b: "Elephant",
-        c: "Has",
-        d: "Long",
-        correct: "a"
-    },
-    {
-        question: "The mountain is ___.",
-        instructions: "Choose the adjective to complete the sentence",
-        a: "High",
-        b: "Higher",
-        c: "Highest",
-        d: "Highly",
-        correct: "a"
-    },
-    {
-        question: "The yellow sun shines in the sky.",
-        instructions: "Select the adjective in the sentence",
-        a: "Yellow",
-        b: "Sun",
-        c: "Shines",
-        d: "Sky",
-        correct: "a"
-    },
-    {
-        question: "The cozy blanket kept her warm.",
-        instructions: "Identify the descriptive adjective",
-        a: "Cozy",
-        b: "Blanket",
-        c: "Kept",
-        d: "Warm",
-        correct: "a"
-    },
-    {
-        question: "The tired children took a nap.",
-        instructions: "Choose the adjective",
-        a: "Tired",
-        b: "Children",
-        c: "Took",
-        d: "Nap",
-        correct: "a"
-    },
-    {
-        question: "This is ____ book.",
-        instructions: "Choose the correct possessive pronoun",
-        a: "My",
-        b: "I",
-        c: "Me",
-        d: "Mine",
-        correct: "a"
-    },
-    {
-        question: "She speaks softly.",
-        instructions: "Identify the adverb in the sentence",
-        a: "She",
-        b: "Speaks",
-        c: "Softly",
-        d: "Speaks softly",
-        correct: "c"
-    },
-    {
-        question: "The elephant is ___ than the giraffe.",
-        instructions: "Select the comparative adjective",
-        a: "Big",
-        b: "Bigger",
-        c: "Biggest",
-        d: "Bigly",
-        correct: "b"
-    },
-    {
-        question: "He ____ to the store yesterday.",
-        instructions: "Choose the correct past tense verb",
-        a: "Go",
-        b: "Goes",
-        c: "Going",
-        d: "Went",
-        correct: "d"
-    },
-    {
-        question: "I like ice cream, ___ I prefer chocolate.",
-        instructions: "Identify the conjunction in the sentence",
-        a: "And",
-        b: "Or",
-        c: "But",
-        d: "Like",
-        correct: "c"
-    },
-    {
-        question: "Select the plural form of 'Fox':",
-        instructions: "Select the plural form of the noun",
-        a: "Foxes",
-        b: "Foxies",
-        c: "Fox's",
-        d: "Foxen",
-        correct: "a"
-    },
-    {
-        question: "This toy is ____.",
-        instructions: "Choose the correct possessive pronoun",
-        a: "Hers",
-        b: "She's",
-        c: "Its",
-        d: "She",
-        correct: "a"
-    },
-    {
-        question: "The cat ____ on the roof.",
-        instructions: "Identify the verb in the sentence",
-        a: "Cat",
-        b: "Is",
-        c: "On",
-        d: "Roof",
-        correct: "b"
-    },
-    {
-        question: "She ran ___ to catch the bus.",
-        instructions: "Pick the correct adverb",
-        a: "Fast",
-        b: "Faster",
-        c: "Fastest",
-        d: "Quick",
-        correct: "a"
-    },
-    {
-        question: "Choose the correct plural form of 'Tomato':",
-        instructions: "plural form of the noun",
-        a: "Tomatoes",
-        b: "Tomatos",
-        c: "Tomato's",
-        d: "Tomates",
-        correct: "a"
-    },
-    {
-        question: "Which sentence contains the correct comparative adjective?",
-        instructions: "Comparative Adjective",
-        a: "The car is more faster than the bicycle.",
-        b: "The car is fastly than the bicycle.",
-        c: "The car is faster than the bicycle.",
-        d: "The car is fast than the bicycle.",
-        correct: "c"
-    },
-    {
-        question: "The river is _____ than the stream.",
-        instructions: "Choose the correct comparative adjective to complete the sentence",
-        a: "wider",
-        b: "wide",
-        c: "more wider",
-        d: "widerer",
-        correct: "a"
-    },
-    {
-        question: "Her grades are getting _____ every semester.",
-        instructions: "Identify the sentence with the correct comparative form",
-        a: "good",
-        b: "more good",
-        c: "better",
-        d: "gooder",
-        correct: "c"
-    },
-    {
-        question: "In the comparison of intelligence, which phrase is grammatically correct?",
-        instructions: "Grammar",
-        a: "The dolphin is smarter than any other sea creature.",
-        b: "The dolphin is more smart than any other sea creature.",
-        c: "The dolphin is smartly than any other sea creature.",
-        d: "The dolphin is smartest than any other sea creature.",
-        correct: "a"
-    },
-    {
-        question: "This task is _____ than the one we did last week.",
-        instructions: "Choose the appropriate comparative form to complete the sentence",
-        a: "more difficult",
-        b: "difficulter",
-        c: "difficulter",
-        d: "difficult",
-        correct: "a"
-    },
-    {
-        question: "______ is coming to the party tonight?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "What",
-        b: "Who",
-        c: "Where",
-        d: "Why",
-        correct: "b"
-    },
-    {
-        question: "______ did you go on your last vacation?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Where",
-        b: "Why",
-        c: "What",
-        d: "Who",
-        correct: "a"
-    },
-    {
-        question: "I wonder ______ the keys are?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "b"
-    },
-    {
-        question: "______ are you crying?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Where",
-        b: "Who",
-        c: "Why",
-        d: "What",
-        correct: "c"
-    },
-    {
-        question: "I asked him ______ he was leaving so soon.",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Where",
-        b: "Why",
-        c: "Who",
-        d: "What",
-        correct: "b"
-    },
-    {
-        question: "I wonder ______ the cat went?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "b"
-    },
-    {
-        question: "______ does the sun rise?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "b"
-    },
-    {
-        question: "I asked him ______ he was feeling.",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "c"
-    },
-    {
-        question: "______ will you celebrate your birthday?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "b"
-    },
-    {
-        question: "______ is your favorite color?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "c"
-    },
-    {
-        question: "______ are you smiling?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "d"
-    },
-    {
-        question: "Tell me ______ you like about this book.",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "d"
-    },
-    {
-        question: "______ does the train go so fast?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "Who",
-        b: "Where",
-        c: "What",
-        d: "Why",
-        correct: "d"
-    },
-    {
-        question: "What is the plural form of 'Child'?",
-        instructions: "Select the correct plural form of the noun",
-        a: "Childs",
-        b: "Childs",
-        c: "Children",
-        d: "Childes",
-        correct: "c"
-    },
-    {
-        question: "Choose the correct possessive pronoun for 'They':",
-        instructions: "Choose the correct possessive pronoun",
-        a: "They're",
-        b: "Theirs",
-        c: "Them",
-        d: "Their",
-        correct: "d"
-    },
-    {
-        question: "She ____ her sister every weekend.",
-        instructions: "Select the correct verb to complete the sentence",
-        a: "Visit",
-        b: "Visits",
-        c: "Visited",
-        d: "Visiting",
-        correct: "b"
-    },
-    {
-        question: "The bird ___ in the tree.",
-        instructions: "Identify the action verb",
-        a: "Bird",
-        b: "Is",
-        c: "In",
-        d: "Sitting",
-        correct: "d"
-    },
-    {
-        question: "The sky is blue.",
-        instructions: "Identify the adjective in the sentence",
-        a: "The",
-        b: "Sky",
-        c: "Is",
-        d: "Blue",
-        correct: "d"
-    },
-    {
-        question: "Which is the correct past tense of the verb 'Swim'?",
-        instructions: "Choose the correct past tense verb",
-        a: "Swims",
-        b: "Swum",
-        c: "Swam",
-        d: "Swiming",
-        correct: "c"
-    },
-    {
-        question: "I need to buy ___ apples.",
-        instructions: "Choose the correct determiner to complete the sentence",
-        a: "Some",
-        b: "Many",
-        c: "Few",
-        d: "Much",
-        correct: "a"
-    },
-    {
-        question: "He sings ____ than his brother.",
-        instructions: "Select the correct comparative form of the adverb",
-        a: "Good",
-        b: "Better",
-        c: "Best",
-        d: "Well",
-        correct: "b"
-    },
-    {
-        question: "The movie was ___ I expected.",
-        instructions: "Identify the adverb in the sentence",
-        a: "More",
-        b: "Interesting",
-        c: "Than",
-        d: "Than",
-        correct: "a"
-    },
-    {
-        question: "______ did you last see him?",
-        instructions: "Choose the correct interrogative pronoun",
-        a: "When",
-        b: "Why",
-        c: "What",
-        d: "Who",
-        correct: "a"
-    },
-    {
-        question: "What is the plural form of 'Mouse'?",
-        instructions: "Select the correct plural form of the noun",
-        a: "Mice",
-        b: "Mouses",
-        c: "Mices",
-        d: "Mouse's",
-        correct: "a"
+    // {
+    //     question: "The flowers ___ in the garden.",
+    //     instructions: "Select the verb in the sentence",
+    //     a: "Flowers",
+    //     b: "Is",
+    //     c: "In",
+    //     d: "Blooming",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "The car ___ down the street.",
+    //     instructions: "Identify the action verb",
+    //     a: "Car",
+    //     b: "Is",
+    //     c: "Down",
+    //     d: "Driving",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "We ___ to the beach last summer.",
+    //     instructions: "Choose the correct verb",
+    //     a: "Go",
+    //     b: "Went",
+    //     c: "Going",
+    //     d: "Goes",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "The big elephant has long tusks.",
+    //     instructions: "Identify the adjective in the sentence",
+    //     a: "Big",
+    //     b: "Elephant",
+    //     c: "Has",
+    //     d: "Long",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "The mountain is ___.",
+    //     instructions: "Choose the adjective to complete the sentence",
+    //     a: "High",
+    //     b: "Higher",
+    //     c: "Highest",
+    //     d: "Highly",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "The yellow sun shines in the sky.",
+    //     instructions: "Select the adjective in the sentence",
+    //     a: "Yellow",
+    //     b: "Sun",
+    //     c: "Shines",
+    //     d: "Sky",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "The cozy blanket kept her warm.",
+    //     instructions: "Identify the descriptive adjective",
+    //     a: "Cozy",
+    //     b: "Blanket",
+    //     c: "Kept",
+    //     d: "Warm",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "The tired children took a nap.",
+    //     instructions: "Choose the adjective",
+    //     a: "Tired",
+    //     b: "Children",
+    //     c: "Took",
+    //     d: "Nap",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "This is ____ book.",
+    //     instructions: "Choose the correct possessive pronoun",
+    //     a: "My",
+    //     b: "I",
+    //     c: "Me",
+    //     d: "Mine",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "She speaks softly.",
+    //     instructions: "Identify the adverb in the sentence",
+    //     a: "She",
+    //     b: "Speaks",
+    //     c: "Softly",
+    //     d: "Speaks softly",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "The elephant is ___ than the giraffe.",
+    //     instructions: "Select the comparative adjective",
+    //     a: "Big",
+    //     b: "Bigger",
+    //     c: "Biggest",
+    //     d: "Bigly",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "He ____ to the store yesterday.",
+    //     instructions: "Choose the correct past tense verb",
+    //     a: "Go",
+    //     b: "Goes",
+    //     c: "Going",
+    //     d: "Went",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "I like ice cream, ___ I prefer chocolate.",
+    //     instructions: "Identify the conjunction in the sentence",
+    //     a: "And",
+    //     b: "Or",
+    //     c: "But",
+    //     d: "Like",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "Select the plural form of 'Fox':",
+    //     instructions: "Select the plural form of the noun",
+    //     a: "Foxes",
+    //     b: "Foxies",
+    //     c: "Fox's",
+    //     d: "Foxen",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "This toy is ____.",
+    //     instructions: "Choose the correct possessive pronoun",
+    //     a: "Hers",
+    //     b: "She's",
+    //     c: "Its",
+    //     d: "She",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "The cat ____ on the roof.",
+    //     instructions: "Identify the verb in the sentence",
+    //     a: "Cat",
+    //     b: "Is",
+    //     c: "On",
+    //     d: "Roof",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "She ran ___ to catch the bus.",
+    //     instructions: "Pick the correct adverb",
+    //     a: "Fast",
+    //     b: "Faster",
+    //     c: "Fastest",
+    //     d: "Quick",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "Choose the correct plural form of 'Tomato':",
+    //     instructions: "plural form of the noun",
+    //     a: "Tomatoes",
+    //     b: "Tomatos",
+    //     c: "Tomato's",
+    //     d: "Tomates",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "Which sentence contains the correct comparative adjective?",
+    //     instructions: "Comparative Adjective",
+    //     a: "The car is more faster than the bicycle.",
+    //     b: "The car is fastly than the bicycle.",
+    //     c: "The car is faster than the bicycle.",
+    //     d: "The car is fast than the bicycle.",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "The river is _____ than the stream.",
+    //     instructions: "Choose the correct comparative adjective to complete the sentence",
+    //     a: "wider",
+    //     b: "wide",
+    //     c: "more wider",
+    //     d: "widerer",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "Her grades are getting _____ every semester.",
+    //     instructions: "Identify the sentence with the correct comparative form",
+    //     a: "good",
+    //     b: "more good",
+    //     c: "better",
+    //     d: "gooder",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "In the comparison of intelligence, which phrase is grammatically correct?",
+    //     instructions: "Grammar",
+    //     a: "The dolphin is smarter than any other sea creature.",
+    //     b: "The dolphin is more smart than any other sea creature.",
+    //     c: "The dolphin is smartly than any other sea creature.",
+    //     d: "The dolphin is smartest than any other sea creature.",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "This task is _____ than the one we did last week.",
+    //     instructions: "Choose the appropriate comparative form to complete the sentence",
+    //     a: "more difficult",
+    //     b: "difficulter",
+    //     c: "difficulter",
+    //     d: "difficult",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "______ is coming to the party tonight?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "What",
+    //     b: "Who",
+    //     c: "Where",
+    //     d: "Why",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "______ did you go on your last vacation?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Where",
+    //     b: "Why",
+    //     c: "What",
+    //     d: "Who",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "I wonder ______ the keys are?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "______ are you crying?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Where",
+    //     b: "Who",
+    //     c: "Why",
+    //     d: "What",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "I asked him ______ he was leaving so soon.",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Where",
+    //     b: "Why",
+    //     c: "Who",
+    //     d: "What",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "I wonder ______ the cat went?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "______ does the sun rise?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "I asked him ______ he was feeling.",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "______ will you celebrate your birthday?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "______ is your favorite color?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "______ are you smiling?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "Tell me ______ you like about this book.",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "______ does the train go so fast?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "Who",
+    //     b: "Where",
+    //     c: "What",
+    //     d: "Why",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "What is the plural form of 'Child'?",
+    //     instructions: "Select the correct plural form of the noun",
+    //     a: "Childs",
+    //     b: "Childs",
+    //     c: "Children",
+    //     d: "Childes",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "Choose the correct possessive pronoun for 'They':",
+    //     instructions: "Choose the correct possessive pronoun",
+    //     a: "They're",
+    //     b: "Theirs",
+    //     c: "Them",
+    //     d: "Their",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "She ____ her sister every weekend.",
+    //     instructions: "Select the correct verb to complete the sentence",
+    //     a: "Visit",
+    //     b: "Visits",
+    //     c: "Visited",
+    //     d: "Visiting",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "The bird ___ in the tree.",
+    //     instructions: "Identify the action verb",
+    //     a: "Bird",
+    //     b: "Is",
+    //     c: "In",
+    //     d: "Sitting",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "The sky is blue.",
+    //     instructions: "Identify the adjective in the sentence",
+    //     a: "The",
+    //     b: "Sky",
+    //     c: "Is",
+    //     d: "Blue",
+    //     correct: "d"
+    // },
+    // {
+    //     question: "Which is the correct past tense of the verb 'Swim'?",
+    //     instructions: "Choose the correct past tense verb",
+    //     a: "Swims",
+    //     b: "Swum",
+    //     c: "Swam",
+    //     d: "Swiming",
+    //     correct: "c"
+    // },
+    // {
+    //     question: "I need to buy ___ apples.",
+    //     instructions: "Choose the correct determiner to complete the sentence",
+    //     a: "Some",
+    //     b: "Many",
+    //     c: "Few",
+    //     d: "Much",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "He sings ____ than his brother.",
+    //     instructions: "Select the correct comparative form of the adverb",
+    //     a: "Good",
+    //     b: "Better",
+    //     c: "Best",
+    //     d: "Well",
+    //     correct: "b"
+    // },
+    // {
+    //     question: "The movie was ___ I expected.",
+    //     instructions: "Identify the adverb in the sentence",
+    //     a: "More",
+    //     b: "Interesting",
+    //     c: "Than",
+    //     d: "Than",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "______ did you last see him?",
+    //     instructions: "Choose the correct interrogative pronoun",
+    //     a: "When",
+    //     b: "Why",
+    //     c: "What",
+    //     d: "Who",
+    //     correct: "a"
+    // },
+    // {
+    //     question: "What is the plural form of 'Mouse'?",
+    //     instructions: "Select the correct plural form of the noun",
+    //     a: "Mice",
+    //     b: "Mouses",
+    //     c: "Mices",
+    //     d: "Mouse's",
+    //     correct: "a"
 
-    }
-    
+    // }
+
 ];
 
 const quiz = document.getElementById('quiz')

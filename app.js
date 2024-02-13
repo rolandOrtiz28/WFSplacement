@@ -134,6 +134,7 @@ const fontSrcUrls = [
     "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/fonts/bootstrap-icons.woff",
     "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/fonts/bootstrap-icons.woff2",
 
+
 ];
 app.use(
     helmet.contentSecurityPolicy({
