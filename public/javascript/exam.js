@@ -474,7 +474,7 @@ function loadQuiz() {
 
     const currentQuizData = quizData[currentQuiz]
 
-    questionEl.innerHTML = `<p class:"text-muted font-weight-bold" style="font-size: 17px; color:black;">${currentQuizData.instructions}</p><h5 class="badge bg-primary rounded-pill me-2">${currentQuiz + 1}</h5>${currentQuizData.question}`;
+    questionEl.innerHTML = `<p class:"class:"text-muted font-weight-bold" style="font-size: 17px; color:black;">${currentQuizData.instructions}</p><h5 class="badge bg-primary rounded-pill me-2">${currentQuiz + 1}</h5>${currentQuizData.question}`;
     a_text.innerText = `a) ${currentQuizData.a}`
     b_text.innerText = `b) ${currentQuizData.b}`
     c_text.innerText = `c) ${currentQuizData.c}`

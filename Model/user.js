@@ -34,6 +34,10 @@ const UserSchema = new Schema({
     qualification: {
         type: String,
         unique: false
+    },
+    school: {
+    type: String,
+    unique: false
     }
 
 
