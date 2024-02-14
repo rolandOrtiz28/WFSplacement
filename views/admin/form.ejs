@@ -27,8 +27,18 @@
             }
 
             body {
-                margin: 1.25in;
+                margin: 0;
             }
+        }
+
+        .hr-line {
+            align-self: center;
+            color: #800000;
+            height: 3px;
+            margin-left: 8rem;
+            border: none;
+            width: 1000px;
+            background-color: #800000;
         }
     </style>
 </head>
@@ -40,49 +50,65 @@
         <h1 class="title text-center mt-3">PLACEMENT TEST RESULT</h1>
         <div class="container mt-5">
             <div class="row">
-                <div class="container" style="border: 2px solid #000000; width: 80%;padding: 2rem;">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <p>Name: <b><%= user.name %></b></p>
+                <div class="container" style="width: 80%;padding: 2rem;">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <p>Name: <b>
+                                        <%= user.name %>
+                                    </b></p>
+                            </div>
+                            <div class="col">
+                                <p>Age: <b>
+                                        <%= user.age %>
+                                    </b></p>
+                            </div>
                         </div>
-                        <div class="col">
-                            <p>Age: <b><%= user.age %></b></p>
+                        <div class="row">
+                            <div class="col">
+                                <p>Gender: <b>
+                                        <%= user.gender %>
+                                    </b></p>
+                            </div>
+                            <div class="col">
+                                <p>Campus: <b>
+                                        <%= user.school %>
+                                    </b></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Gender: <b><%= user.gender %></b></p>
+                        <div class="row">
+                            <div class="col">
+                                <p>Program: <b>
+                                        <%= user.program %>
+                                    </b></p>
+                            </div>
+                            <div class="col">
+                                <p>Test Date: <b>
+                                        <%= user.createdAt?.toLocaleString() || 'N/A' %>
+                                    </b></p>
+                            </div>
                         </div>
-                        <div class="col">
-                            <p>Campus: <b><%= user.school %></b></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Program: <b><%= user.program %></b></p>
-                        </div>
-                        <div class="col">
-                            <p>Test Date: <b><%= user.createdAt?.toLocaleString() || 'N/A' %></b></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <p>Start Lever: <b style="font-size: 20px;"><%= user.qualification ? user.qualification.toUpperCase() : '' %></b></p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p>Start Lever: <b style="font-size: 20px;">
+                                        <%= user.qualification ? user.qualification.toUpperCase() : '' %>
+                                    </b></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            
+
 
             <div class="row mt-5">
-                <div class=""></div>
-                <div class="">
-                    <p class="text-center mt-5">
-                        <b>Headquarters, St. 151, Srae Duontouch Village, Sangkat Ponhea Pun, Khan Praek Pnov, Phnom Penh</b>
+
+                <div class="" style="border-top: 3px solid #800000;">
+                    <!-- <div class="hr-line"></div> -->
+                    <p class="text-center mt-5" style="font-size: 12px;">
+                        <b>Headquarters, St. 151, Srae Duontouch Village, Sangkat Ponhea Pun, Khan Praek Pnov, Phnom
+                            Penh</b>
                     </p>
-                    <p class="text-center">
+                    <p class="text-center" style="font-size: 12px;">
                         <b>Phone: 010 566 510 / 012 453 448</b>
                     </p>
                 </div>
