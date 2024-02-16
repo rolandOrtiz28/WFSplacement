@@ -19,8 +19,18 @@ router.post('/register', catchAsync(async (req, res) => {
     // Redirect based on the selected program
     if (program === "English Young Learners") {
         res.redirect('/examination');
-    } else if (program === "English Adult Learners") {
-        res.redirect('/examinationeal');
+    } else if (program === "English Adult Learners(Part-Time 1 WFS)") {
+        res.redirect('/ealwfs1');
+    } else if (program === "English Adult Learners(Part-Time 2 WFS)") {
+        res.redirect('/ealwfs2');
+    } else if (program === "English Young Learners(Part-Time 1 D.C)") {
+        res.redirect('/eylpt1');
+    } else if (program === "English Young Learners(Part-Time 2 D.C)") {
+        res.redirect('/eylpt2');
+    } else if (program === "English Adult Learners(Part-Time 1 D.C)") {
+        res.redirect('/ealdc');
+    } else if (program === "English Adult Learners(Part-Time 2 D.C)") {
+        res.redirect('/ealdc');
     } else {
         // Handle invalid program selection
         res.status(400).send("Invalid program selection");

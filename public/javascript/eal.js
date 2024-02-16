@@ -507,19 +507,14 @@ submitBtn.addEventListener('click', () => {
 
             // Determine qualification
             let qualification;
-            if (percentage >= 1 && percentage <= 15) {
+
+            if (percentage >= 1 && percentage <= 25) {
                 qualification = 'EAL-1';
-            } else if (percentage > 16 && percentage <= 30) {
-                qualification = 'EAL-2';
-            } else if (percentage > 31 && percentage <= 45) {
+            } else if (percentage > 26 && percentage <= 50) {
                 qualification = 'EAL-3';
-            } else if (percentage > 46 && percentage <= 60) {
-                qualification = 'EAL-4';
-            } else if (percentage > 61 && percentage <= 75) {
+            } else if (percentage > 51 && percentage <= 75) {
                 qualification = 'EAL-5';
-            } else if (percentage > 76 && percentage <= 90) {
-                qualification = 'EAL-6';
-            } else if (percentage > 91 && percentage <= 100) {
+            } else if (percentage > 76 && percentage <= 100) {
                 qualification = 'EAL-7';
             } else {
                 qualification = 'Not Qualified';
