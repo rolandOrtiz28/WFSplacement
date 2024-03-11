@@ -512,7 +512,7 @@ submitBtn.addEventListener('click', () => {
                 qualification = 'EAL-1';
             } else if (percentage > 35 && percentage <= 65) {
                 qualification = 'EAL-3';
-            } else if (percentage > 66 && percentage <= 100) {
+            } else if (percentage > 65 && percentage <= 100) {
                 qualification = 'EAL-5';
             } else {
                 qualification = 'Not Qualified';
