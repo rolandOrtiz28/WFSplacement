@@ -12,19 +12,14 @@ const MongoDBStore = require("connect-mongo");
 const ejsMate = require('ejs-mate')
 const mongoSanitize = require('express-mongo-sanitize');
 const ExpressError = require('./utils/ExpressError');
-<<<<<<< HEAD
 const dbUrl = 'mongodb://127.0.0.1:27017/wfsplacement'
 const Admin = require('./Model/admin');
 const helmet = require('helmet')
 
 //process.env.DB_URL ||
-=======
-const dbUrl =process.env.DB_URL ||'mongodb://127.0.0.1:27017/wfsplacement'
-const Admin = require('./Model/admin');
-const helmet = require('helmet')
 
-//  
->>>>>>> 65a9c02a57552e01ebc4db7c8b166bfc6f18fd7c
+
+//
 mongoose.connect(dbUrl, {});
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, " connection error:"));

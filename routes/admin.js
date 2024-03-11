@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router()
 const User = require('../Model/user');
+const Application = require('../Model/application');
 const catchAsync = require('../utils/catchAsync')
 const { isLoggedIn } = require('../middleware')
 const Admin = require('../Model/admin');
@@ -11,6 +12,11 @@ const passport = require('passport');
 router.get('/admin', isLoggedIn, catchAsync(async (req, res) => {
     const users = await User.find()
     res.render('./admin/admin', { users })
+}))
+
+router.get('/application', isLoggedIn, catchAsync(async (req, res) => {
+    const applicants = await Application.find()
+    res.render('./admin/applicants', { applicants })
 }))
 
 router.get('/adminregisterwashingtonschool123456789', (req, res) => {
@@ -93,6 +99,7 @@ router.get('/washingtonfirst/:id', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+
 router.get('/dc/:id', async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
@@ -101,6 +108,20 @@ router.get('/dc/:id', async (req, res) => {
             return res.redirect('/placement/admin');
         }
         res.render('./admin/form2', { user });
+    } catch (error) {
+        // Handle errors
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+router.get('/application/:id', isLoggedIn, async (req, res) => {
+    try {
+        const applicant = await Application.findById(req.params.id);
+        if (!applicant) {
+            req.flash('error', "No applicant found");
+            return res.redirect('/placement/application');
+        }
+        res.render('./admin/applicantResult', { applicant });
     } catch (error) {
         // Handle errors
         console.error(error);

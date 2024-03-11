@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/Images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washington First School Assessment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Italiana&family=PT+Serif&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        .title {
+            font-family: "PT Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+        }
+
+      @media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    /* Add a wrapper for the content to print two copies */
+
+
+    /* Adjust width and margins for each copy */
+    .content {
+        width: 120%; /* Adjust the width as needed */
+        border: thick double #800000;
+    }
+}
+
+    </style>
+</head>
+
+<body class="container mt-5">
+
+
+
+
+<div class="content-wrapper">
+    <div class="content"  style="border: thick double #800000">
+
+            <img src="/images/Logo.png" alt="" style="width: 100px;" class="mt-5 mx-auto d-block">
+            <p class="text-center mt-2" style="font-size: 10px; color: #800000;">WASHINGTON INTERNATIONAL SCHOOL</p>
+            <h1 class="title text-center mt-3">PLACEMENT TEST RESULT</h1>
+            <div class="container mt-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="container" style="border: 2px solid #000000; width: 80%;padding: 2rem;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <p>Name: <b>
+                                            <%= applicant.name %>
+                                        </b></p>
+                                </div>
+                                <div class="col">
+                                    <p>Age: <b>
+                                            <%= applicant.age %>
+                                        </b></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Gender: <b>
+                                            <%= applicant.gender %>
+                                        </b></p>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Position: <b>
+                                            <%= applicant.position %>
+                                        </b></p>
+                                </div>
+                                <div class="col">
+                                    <p>Test Date: <b>
+                                            <%= applicant.createdAt?.toLocaleString() || 'N/A' %>
+                                        </b></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <% if (applicant.qualification && applicant.qualification.toUpperCase()==='PASSED' ) { %>
+                                        <p>Status: <b style="font-size: 20px; color:green">
+                                                <%= applicant.qualification ? applicant.qualification.toUpperCase() : '' %>
+                                            </b></p>
+                                        <% } else if (applicant.qualification &&
+                                            applicant.qualification.toUpperCase()==='FAILED' ) { %>
+                                            <p>Status: <b style="font-size: 20px; color:red">
+                                                    <%= applicant.qualification ? applicant.qualification.toUpperCase() : '' %>
+                                                </b></p>
+                                            <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 d-flex justify-content-center">
+                    <% if (applicant.qualification && applicant.qualification.toUpperCase()==='PASSED' ) { %>
+                        <p class="w-75 text-center">
+                            Congratulations to <%= applicant.name %> on completing the placement test! With an impressive
+                                performance at the
+                                <%= applicant.qualification ? applicant.qualification.toUpperCase() : '' %>, <%=
+                                        applicant.position %> awaits you with
+                                        promising opportunities for growth and success.
+                        </p>
+                        <% } else if (applicant.qualification && applicant.qualification.toUpperCase()==='FAILED' ) { %>
+                            <p class="w-75 text-center">
+                                We're sorry, <b>
+                                    <%= applicant.name %>
+                                </b>. Unfortunately, your performance in the placement test did not meet the
+                                required standards. We encourage you to keep striving for excellence and wish you the best in
+                                your
+                                future endeavors.
+                            </p>
+                            <% } %>
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="">
+                        <p class="text-center mt-5">
+                            <b>Main Office, St. 151, Srae Duontouch Village, Sangkat Ponhea Pun, Khan Praek Pnov, Phnom
+                                Penh</b>
+                        </p>
+                        <p class="text-center">
+                            <b>Phone:087 733 526 / 012 252 147 / 098 237 422 / 096 904 0206</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    <div class="content"  style="border: thick double #800000">
+
+            <img src="/images/Logo.png" alt="" style="width: 100px;" class="mt-5 mx-auto d-block">
+            <p class="text-center mt-2" style="font-size: 10px; color: #800000;">WASHINGTON INTERNATIONAL SCHOOL</p>
+            <h1 class="title text-center mt-3">PLACEMENT TEST RESULT</h1>
+            <div class="container mt-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="container" style="border: 2px solid #000000; width: 80%;padding: 2rem;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <p>Name: <b>
+                                            <%= applicant.name %>
+                                        </b></p>
+                                </div>
+                                <div class="col">
+                                    <p>Age: <b>
+                                            <%= applicant.age %>
+                                        </b></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Gender: <b>
+                                            <%= applicant.gender %>
+                                        </b></p>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Position: <b>
+                                            <%= applicant.position %>
+                                        </b></p>
+                                </div>
+                                <div class="col">
+                                    <p>Test Date: <b>
+                                            <%= applicant.createdAt?.toLocaleString() || 'N/A' %>
+                                        </b></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <% if (applicant.qualification && applicant.qualification.toUpperCase()==='PASSED' ) { %>
+                                        <p>Status: <b style="font-size: 20px; color:green">
+                                                <%= applicant.qualification ? applicant.qualification.toUpperCase() : '' %>
+                                            </b></p>
+                                        <% } else if (applicant.qualification &&
+                                            applicant.qualification.toUpperCase()==='FAILED' ) { %>
+                                            <p>Status: <b style="font-size: 20px; color:red">
+                                                    <%= applicant.qualification ? applicant.qualification.toUpperCase() : '' %>
+                                                </b></p>
+                                            <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 d-flex justify-content-center">
+                    <% if (applicant.qualification && applicant.qualification.toUpperCase()==='PASSED' ) { %>
+                        <p class="w-75 text-center">
+                            Congratulations to <%= applicant.name %> on completing the placement test! With an impressive
+                                performance at the
+                                <%= applicant.qualification ? applicant.qualification.toUpperCase() : '' %>, <%=
+                                        applicant.position %> awaits you with
+                                        promising opportunities for growth and success.
+                        </p>
+                        <% } else if (applicant.qualification && applicant.qualification.toUpperCase()==='FAILED' ) { %>
+                            <p class="w-75 text-center">
+                                We're sorry, <b>
+                                    <%= applicant.name %>
+                                </b>. Unfortunately, your performance in the placement test did not meet the
+                                required standards. We encourage you to keep striving for excellence and wish you the best in
+                                your
+                                future endeavors.
+                            </p>
+                            <% } %>
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="">
+                        <p class="text-center mt-5">
+                            <b>Main Office, St. 151, Srae Duontouch Village, Sangkat Ponhea Pun, Khan Praek Pnov, Phnom
+                                Penh</b>
+                        </p>
+                        <p class="text-center">
+                            <b>Phone:087 733 526 / 012 252 147 / 098 237 422 / 096 904 0206</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
