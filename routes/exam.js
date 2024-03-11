@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require('../Model/user')
+const Application = require('../Model/application')
 const nodemailer = require('nodemailer');
 const catchAsync = require('../utils/catchAsync');
 
@@ -19,6 +20,32 @@ router.get('/eylpt2', async (req, res) => {
     console.log(user)
     res.render('./exam/eylpt2', { user: user });
 })
+
+router.get('/applicationexam', async (req, res) => {
+    const application = req.session.application; // Adjust this line based on where your application object is stored
+    console.log(application)
+    res.render('./exam/application', { application: application });
+})
+
+
+router.post('/applicationexam', catchAsync(async (req, res) => {
+    const { userId, score, percentage, qualification } = req.body;
+
+    try {
+        const application = await Application.findByIdAndUpdate(userId, {
+            score: score,
+            percentage: percentage,
+            qualification: qualification
+        });
+        if (!application) {
+            return res.status(404).send('User not found');
+        }
+        res.redirect('/thankyou');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+}));
 
 
 router.post('/examination', catchAsync(async (req, res) => {

@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Italiana&family=PT+Serif&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:wght@300&display=swap"
         rel="stylesheet">
     <style>
+    
         .title {
             font-family: "PT Serif", serif;
             font-weight: 400;
@@ -34,6 +35,7 @@
 </head>
 
 <body class="container mt-5" style="border: thick double #800000">
+    
     <div class="content">
         <img src="/images/Logo.png" alt="" style="width: 100px;" class="mt-5 mx-auto d-block">
         <p class="text-center mt-2" style="font-size: 10px; color: #800000;">WASHINGTON D.C INTERNATIONAL SCHOOL</p>
@@ -68,16 +70,22 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <p>Start Lever: <b style="font-size: 20px;"><%= user.qualification ? user.qualification.toUpperCase() : '' %></b></p>
+                            <p>Start Level: <b style="font-size: 20px;"><%= user.qualification ? user.qualification.toUpperCase() : '' %></b></p>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
-            
+            <div class="row mt-5 d-flex justify-content-center">
+                <p class="w-75 text-center">
+                    Congratulations to <%= user.name %> on completing the placement test! With an impressive performance at the <%= user.qualification ? user.qualification.toUpperCase() : '' %>, <%= user.program %> awaits you with promising opportunities for growth and success.
+                
+                </p>
+                
+                </div>
 
             <div class="row mt-5">
-                <div class=""></div>
+                
                 <div class="">
                     <p class="text-center mt-5">
                         <b>អាសយដ្ឋាន ផ្លូវ១៥១ ភូមិធំត្បូង សង្កាត់ពញាពន់  ខណ្ឌព្រែកព្នៅ រាជធានីភ្នំពេញ</b>

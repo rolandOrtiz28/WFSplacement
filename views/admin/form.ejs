@@ -90,7 +90,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
-                                <p>Start Lever: <b style="font-size: 20px;">
+                                <p>Start Level: <b style="font-size: 20px;">
                                         <%= user.qualification ? user.qualification.toUpperCase() : '' %>
                                     </b></p>
                             </div>
@@ -98,7 +98,13 @@
                     </div>
                 </div>
             </div>
+<div class="row mt-5">
+<p>
+    Congratulations to <%= user.name %> on completing the placement test! With an impressive performance at the <%= user.qualification ? user.qualification.toUpperCase() : '' %>, <%= user.program %> awaits you with promising opportunities for growth and success.
 
+</p>
+
+</div>
 
             <div class="row mt-5">
 
