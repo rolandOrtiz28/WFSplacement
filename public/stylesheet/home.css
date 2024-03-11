@@ -22,7 +22,11 @@ h1 {
 
 .container-fluid .container {
     box-shadow: 10px 5px 5px #055DD4;
-    background: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url("/images/Logo.png");
+    background-position: center;
+    /* Adjust the background-size property to change the size of the background image */
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.9px);
